@@ -3,7 +3,7 @@ FLAGS?="-X main.version=${VERSION}"
 GOOS?=darwin
 
 build:
-	@go build -ldflags ${FLAGS} -o dist/ckies
+	@go build -ldflags ${FLAGS} -o dist/ckies_${GOOS}
 
 run:
 	@go run -ldflags ${FLAGS} main.go ${CMD}
