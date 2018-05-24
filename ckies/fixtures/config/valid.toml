@@ -1,0 +1,20 @@
+Name = "Valid Name"
+Info = "Example Description"
+Website = "https://example.com"
+Services = [ "valid" ]
+
+[Options]
+
+ForceTables = true
+
+[Links]
+
+Policy = "/custom/policy.html"
+Settings = "/custom/settings.html"
+
+[[Cookies]]
+
+Name = "default_functional"
+Info = "Information about cookie"
+Type = "functional"
+Expires = "1y"

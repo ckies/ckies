@@ -1,0 +1,31 @@
+Name = "Valid Service Name"
+Info = "A short description"
+Website = "https://example.com"
+
+[[Cookies]]
+
+Name = "test_necessary"
+Info = "Some cookie. IDK what purpose."
+Type = "necessary"
+Expires = "10y"
+
+[[Cookies]]
+
+Name = "test_functional"
+Info = "Some cookie. IDK what purpose."
+Type = "functional"
+Expires = "1d"
+
+[[Cookies]]
+
+Name = "test_performance"
+Info = "Some cookie. IDK what purpose."
+Type = "performance"
+Expires = "1h"
+
+[[Cookies]]
+
+Name = "test_marketing"
+Info = "Some cookie. IDK what purpose."
+Type = "marketing"
+Expires = "1m"
