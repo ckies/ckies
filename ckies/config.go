@@ -7,22 +7,32 @@ import (
 	"github.com/BurntSushi/toml"
 )
 
-// Config stores data from the config file
-type Config struct {
-	ContainsCookies
-
+// ConfigBase stores basic information
+type ConfigBase struct {
 	Name    string
 	Info    string
 	Website string
+}
 
-	Options struct {
-		ForceTables bool
-	}
+// ConfigLinks stores information about customizable links in content
+type ConfigLinks struct {
+	Policy   string
+	Settings string
+}
 
-	Links struct {
-		Policy   string
-		Settings string
-	}
+// ConfigOptions enables/disables behaviour and custom blocks
+type ConfigOptions struct {
+	ForceTables              bool
+	IncludeFacebookAudiences bool
+}
+
+// Config stores data from the config file
+type Config struct {
+	ContainsCookies
+	ConfigBase
+
+	Options ConfigOptions
+	Links   ConfigLinks
 
 	Services []string
 }

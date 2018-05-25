@@ -8,18 +8,10 @@ import (
 )
 
 type Builder struct {
-	Name    string
-	Info    string
-	Website string
+	ConfigBase
 
-	Options struct {
-		ForceTables bool
-	}
-
-	Links struct {
-		Policy   string
-		Settings string
-	}
+	Options ConfigOptions
+	Links   ConfigLinks
 
 	Cookies struct {
 		Necessary   []Cookie
@@ -50,11 +42,9 @@ func (b *Builder) Parse(file string) (*Document, error) {
 // NewBuilder returns a Builder with config
 func NewBuilder(config Config, services map[string]Service) Builder {
 	builder := Builder{
-		Name:    config.Name,
-		Info:    config.Info,
-		Website: config.Website,
-		Links:   config.Links,
-		Options: config.Options,
+		ConfigBase: config.ConfigBase,
+		Links:      config.Links,
+		Options:    config.Options,
 	}
 
 	merger := Merger{config, services}
