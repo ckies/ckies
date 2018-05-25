@@ -48,7 +48,7 @@ var buildCmd = &cobra.Command{
 			format := exports[cfgFormat]
 
 			if err != nil {
-				abort("Failed to render template: %s", file)
+				abort("Failed to render template %q: %s", file, err)
 			}
 
 			name := strings.TrimSuffix(file, path.Ext(file)) + "." + format.extension
