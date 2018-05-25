@@ -24,6 +24,7 @@ type ConfigLinks struct {
 type ConfigOptions struct {
 	ForceTables              bool
 	IncludeFacebookAudiences bool
+	ExtendedGoogleAnalytics  bool
 }
 
 // Config stores data from the config file
